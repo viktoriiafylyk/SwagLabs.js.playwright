@@ -1,0 +1,38 @@
+{
+  "name": "swaglabs.js.playwright",
+  "version": "1.0.0",
+  "description": "Playwright tests for SwagLabs application",
+  "main": "index.js",
+  "scripts": {
+    "testCI": "xvfb-run --auto-servernum npx playwright test",
+    "test": "npx playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "test:fileCI": "xvfb-run --auto-servernum npx playwright test --",
+    "test:grepCI": "xvfb-run --auto-servernum npx playwright test --grep",
+    "test:serialCI": "xvfb-run --auto-servernum npx playwright test --workers=1",
+    "test:headed:serial": "playwright test --headed --workers=1",
+    "test:headed:file": "playwright test --headed ",
+    "test:headed:serial:file": "playwright test --headed --workers=1"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation"
+  ],
+  "dependencies": {
+    "log4js": "^6.9.1",
+    "prettier": "^3.6.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viktoriiafylyk/SwagLabs.js.playwright.git"
+  },
+  "private": true
+}
