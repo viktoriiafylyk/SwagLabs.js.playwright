@@ -3,17 +3,15 @@
 This project automates end-to-end testing for the Swag Labs website [https://www.saucedemo.com/] 
 using Playwright and the Page Object Model (POM) pattern.
 
-It demonstrates best practices for structuring an automation framework, managing test data, and generating detailed reports.
+It demonstrates best practices for structuring an automation framework, managing test data, and generating detailed
+reports.
 
-## 📂 Project Structure 
+## 📂 Project Structure
 
 ```
 swaglabs-playwright/
 ├── src/
 │    ├── pages/                 # Page Object Model (POM) classes
-│         ├── LoginPage.js
-│         ├── InventoryPage.js
-│         ├── CartPage.js
 │    ├── modals/ 
 │    ├── component/
 │
@@ -62,6 +60,7 @@ swaglabs-playwright/
 `npx playwright test --grep "@smoke"`
 
 ## 📊 Viewing Reports
+
 This project uses Playwright's built-in HTML reporter.
 
 #### After running tests, generate and view the report:
@@ -70,10 +69,10 @@ This project uses Playwright's built-in HTML reporter.
 
 A browser window will open showing detailed test results with screenshots, videos, and execution logs.
 
-
 ## 🎯 Generating Code with npx playwright codegen
 
-Playwright provides a built-in Codegen tool that automatically generates test code while you interact with a browser in real time.
+Playwright provides a built-in Codegen tool that automatically generates test code while you interact with a browser in
+real time.
 
 #### - Start codegen for a specific site:
 
