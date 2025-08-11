@@ -70,3 +70,19 @@ This project uses Playwright's built-in HTML reporter.
 
 A browser window will open showing detailed test results with screenshots, videos, and execution logs.
 
+
+## 🎯 Generating Code with npx playwright codegen
+
+Playwright provides a built-in Codegen tool that automatically generates test code while you interact with a browser in real time.
+
+#### - Start codegen for a specific site:
+
+`npx playwright codegen https://www.saucedemo.com/`
+
+#### - Specify browser and target language:
+
+`npx playwright codegen --browser=chromium --target=javascript https://www.saucedemo.com/`
+
+#### - Save recorded code to a file:
+
+`npx playwright codegen https://www.saucedemo.com/ --output=tests/generated-login.spec.js`
