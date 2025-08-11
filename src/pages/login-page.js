@@ -2,7 +2,7 @@ const SELECTORS = {
     username: '#user-name',
     password: '#password',
     loginButton: '#login-button',
-    errorMessage: '[data-test="error-button"]'
+    errorMessage: '[data-test="error"]'
 };
 
 export class LoginPage {
@@ -27,7 +27,7 @@ export class LoginPage {
         await this.password.fill(password);
     }
 
-    async clickLoginButton(){
+    async clickLoginButton() {
         await this.loginButton.click();
     }
 
@@ -40,4 +40,4 @@ export class LoginPage {
     }
 }
 
-module.exports = { LoginPage };
+module.exports = {LoginPage};
