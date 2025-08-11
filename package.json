@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "testCI": "xvfb-run --auto-servernum npx playwright test",
-    "test": "npx playwright test",
+    "test": "npx playwright test --reporter=html",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
     "report": "playwright show-report",
