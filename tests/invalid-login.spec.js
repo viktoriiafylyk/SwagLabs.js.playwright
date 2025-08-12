@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 import {LoginPage} from "../src/pages/login-page";
-import {InvalidLoginData} from "../tests/data/invalid-login-data";
+import {InvalidLoginData} from "../utils/data/invalid-login-data";
 
 test.describe('Invalid Login Test', () => {
     let loginPage;
