@@ -17,7 +17,8 @@ test.describe('Valid Login Test', () => {
         await loginPage.enterUsername('standard_user');
         await loginPage.enterPassword('secret_sauce');
         await loginPage.clickLoginButton();
-        await expect(inventoryPage.inventoryContainer).toBeVisible();
-        await expect(inventoryPage.inventoryItem.first()).toBeVisible();
+        await expect(await inventoryPage.isOnInventoryPage()).toBeTruthy();
+        await expect(await inventoryPage.areProductsDisplayed()).toBeGreaterThan(0);
+
     });
 });
