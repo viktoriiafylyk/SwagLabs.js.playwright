@@ -3,6 +3,7 @@ const SELECTORS = {
     inventoryItem: '[data-test="inventory-item"]',
     sortContainer: '[data-test="product-sort-container"]',
     removeFromCartButton: "button[data-test^='remove-sauce-labs']",
+    addToCartButton: "button[data-test^='add-to-cart-sauce-labs']",
     productName: '[data-test="inventory-item-name"]',
     productPrice: '[data-test="inventory-item-price"]'
 };
@@ -52,4 +53,23 @@ export class InventoryPage {
         const numericPrices = prices.map(p => parseFloat(p.replace('$', '')));
         return numericPrices.every((price, i) => i === 0 || numericPrices[i - 1] >= price);
     }
+
+    async addProductsToCart(numberOfProducts) {
+        const addButtons = this.page.locator(SELECTORS.addToCartButton);
+        const count = await addButtons.count();
+
+        for (let i = 0; i < numberOfProducts && i < count; i++) {
+            await addButtons.nth(i).click();
+        }
+    }
+
+    async clickRemoveFromCart(numberOfProducts) {
+        for (let i = 0; i < numberOfProducts; i++) {
+            if (await this.removeFromCartButton.count() === 0) {
+                throw new Error('No "Remove" buttons found');
+            }
+            await this.removeFromCartButton.first().click();
+        }
+    }
+
 }
