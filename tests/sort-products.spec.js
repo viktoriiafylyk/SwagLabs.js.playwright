@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/login-fixture';
-import {SortingComponent} from "../src/component/sorting-component";
+import {SortingComponent} from "src/component/sorting-component";
 
 test.describe('Checking the sorting of the products', () => {
     test('Verify all sorting options', async ({ page, inventoryPage }) => {

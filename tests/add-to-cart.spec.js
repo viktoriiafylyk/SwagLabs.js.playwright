@@ -1,5 +1,5 @@
 import {test, expect} from '../fixtures/login-fixture';
-import {HeaderComponent} from "../src/component/header-component";
+import {HeaderComponent} from "src/component/header-component";
 
 test.describe('Shopping cart counter', () => {
     test('Verify cart counter updates when adding and removing products', async ({inventoryPage, page}) => {

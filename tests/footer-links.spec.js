@@ -1,5 +1,5 @@
 import {test, expect} from '../fixtures/login-fixture';
-import {FooterComponent} from '../src/component/footer-component';
+import {FooterComponent} from 'src/component/footer-component';
 
 test.describe('Footer social media links', () => {
     test('Verify footer links and copyright text', async ({inventoryPage}) => {
