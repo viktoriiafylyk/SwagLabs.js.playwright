@@ -3,6 +3,7 @@ import { HeaderComponent } from "src/component/header-component";
 import { CartPage } from "src/pages/cart-page";
 import { CheckoutInfoPage } from "src/pages/checkout-info-page";
 import { InvalidCheckoutData } from "utils/data/invalid-checkout-data";
+import { isErrorDisplayed, getErrorText } from 'utils/error-utils.js';
 
 test.describe('Checkout Info - validation of empty fields', () => {
     Object.entries(InvalidCheckoutData).forEach(([caseName, data]) => {
@@ -19,8 +20,8 @@ test.describe('Checkout Info - validation of empty fields', () => {
             await checkoutInfoPage.fillTheCheckoutForm(data.firstName, data.lastName, data.postalCode);
             await checkoutInfoPage.clickContinueButton();
 
-            expect(await checkoutInfoPage.isErrorDisplayed()).toBeTruthy();
-            expect(await checkoutInfoPage.getErrorText()).toBe(data.expectedError);
+            expect(await isErrorDisplayed(checkoutInfoPage.errorMessage)).toBeTruthy();
+            expect(await getErrorText(checkoutInfoPage.errorMessage)).toBe(data.expectedError);
         });
     });
 });

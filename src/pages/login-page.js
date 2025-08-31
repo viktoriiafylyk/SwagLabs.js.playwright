@@ -1,5 +1,3 @@
-import {isErrorDisplayed, getErrorText} from 'utils/error-utils.js';
-
 const SELECTORS = {
     username: '#user-name',
     password: '#password',
@@ -31,13 +29,5 @@ export class LoginPage {
 
     async clickLoginButton() {
         await this.loginButton.click();
-    }
-
-    async isErrorDisplayed() {
-        return await isErrorDisplayed(this.errorMessage);
-    }
-
-    async getErrorText() {
-        return await getErrorText(this.errorMessage);
     }
 }

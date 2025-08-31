@@ -1,5 +1,3 @@
-import { isErrorDisplayed, getErrorText } from 'utils/error-utils.js';
-
 const SELECTORS = {
     firstName: '[data-test="firstName"]',
     lastName: '[data-test="lastName"]',
@@ -32,13 +30,5 @@ export class CheckoutInfoPage {
         await this.firstName.fill(firstName);
         await this.lastName.fill(lastname);
         await this.postalCode.fill(postalCode);
-    }
-
-    async isErrorDisplayed() {
-        return await isErrorDisplayed(this.errorMessage);
-    }
-
-    async getErrorText() {
-        return await getErrorText(this.errorMessage);
     }
 }
